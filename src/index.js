@@ -1,7 +1,5 @@
 import React from "react";
-import ReactDom from "react-dom";
+import ReactDOM from "react-dom/client"; // Keep this import for React 18+
+import App from './App';
 
-import App from  './App'
-
-import ReactDOM from "react-dom/client";
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);

@@ -1,23 +1,23 @@
 import React from "react";
 
-
-const MovieCard = ( {movie} ) => {
-    return (
-        <div className="movie">
-        <div>
+const MovieCard = ({ movie }) => {
+  return (
+    <div className="movie">
+      <div>
         <p>{movie.Year}</p>
-        </div>
-        <div>
-        <img src = {movie.Poster !== 'N/A' ? 
-          movie.Poster : {}} 
-          alt="movie.title"/>
-        </div>
-    <div>
+      </div>
+      <div>
+        <img
+          src={movie.Poster !== 'N/A' ? movie.Poster : ''}
+          alt={movie.Title} // Corrected alt attribute to use movie.Title
+        />
+      </div>
+      <div>
         <span>{movie.Type}</span>
         <h3>{movie.Title}</h3>
-   </div>
-        </div>
-     )
+      </div>
+    </div>
+  );
 };
 
 export default MovieCard;
